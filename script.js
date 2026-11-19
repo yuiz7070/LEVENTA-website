@@ -511,3 +511,26 @@ zoomContainer.addEventListener("touchmove", function(e) {
 zoomContainer.addEventListener("touchend", function() {
     initialDistance = 0;
 }, { passive: true });
+
+document.querySelectorAll(".product-card").forEach(card => {
+
+  const oldPriceElement = card.querySelector(".old-price");
+  const newPriceElement = card.querySelector(".new-price");
+
+  const oldPrice = Number(
+      oldPriceElement.textContent.replace(/[^0-9]/g, "")
+  );
+
+  const discount = Number(card.dataset.discount) || 0;
+
+  const newPrice = Math.round(
+      oldPrice * (1 - discount / 100)
+  );
+
+  oldPriceElement.textContent =
+      "قیمت : " + oldPrice.toLocaleString("EN-IR") + " ریال";
+
+  newPriceElement.textContent =
+      "قیمت جدید: " + newPrice.toLocaleString("EN-IR") + " ریال";
+
+});
