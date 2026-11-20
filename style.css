@@ -502,11 +502,7 @@ margin: 10px 0 6px;
 }
 
 @media (max-width: 500px) {
-  .search-box {
-      flex-direction: row;
-      width: calc(100%-28px);
-      margin: 16px auto;
-  }
+  
 }
 /* تنظیمات کلی سایت */
 * {
