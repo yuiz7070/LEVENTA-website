@@ -18,7 +18,7 @@ const startSlider = () => {
   
         slides[currentSlide].classList.add("active");
   
-    }, 3000);
+    }, 2000);
   };
   
   if (document.readyState === "loading") {
