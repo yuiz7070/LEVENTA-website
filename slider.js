@@ -15,7 +15,7 @@ const startSlider = () => {
         currentSlide = (currentSlide + 1) % slides.length;
 
         slides[currentSlide].classList.add("active");
-    }, 1000); // تغییر اسلاید هر ۱ ثانیه
+    }, 2000); // تغییر اسلاید هر ۱ ثانیه
 };
 
 if (document.readyState === "loading") {
